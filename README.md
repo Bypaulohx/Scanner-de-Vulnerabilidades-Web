@@ -11,7 +11,7 @@ Ferramenta estilo **Nikto** (bem mais simples) que verifica falhas comuns em apl
 
 ## Arquitetura
 
-```mermaid
+```
 flowchart TD
     A[CLI (argparse)] --> B[Core (requests Session)]
     B --> C[XSS Check]
