@@ -12,7 +12,7 @@ Ferramenta estilo **Nikto** (bem mais simples) que verifica falhas comuns em apl
 
 ## Arquitetura (alto nível)
 
-```mermaid
+```
 flowchart TD
     A[CLI (argparse)] --> B[Core (requests Session)]
     B --> C[XSS Check]
@@ -160,16 +160,6 @@ O projeto inclui um frontend moderno em React + TypeScript para uso via navegado
    ```
 
 3. Acesse **http://localhost:5173** — interface com formulário de varredura, seleção de testes e visualização de resultados em tempo real.
-
----
-
-## Boas práticas e próximos passos
-
-- Adicionar **crawler** simples para descobrir mais URLs e parâmetros.
-- Implementar **time-based blind SQLi** (com latência medida).
-- Suporte a **cookies** e **auth** (headers customizados).
-- Exportar relatório em **HTML** estilizado.
-- Paralelização controlada por **threads/async**.
 
 ---
 
