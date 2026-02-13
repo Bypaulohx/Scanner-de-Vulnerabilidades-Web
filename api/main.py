@@ -59,6 +59,7 @@ def root():
 
 
 @app.post("/api/scan", response_model=ScanResponse)
+@app.post("/", response_model=ScanResponse)  # Vercel pode passar path como /
 def run_scan(req: ScanRequest):
     """
     Executa varredura de vulnerabilidades na URL fornecida.

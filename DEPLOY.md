@@ -100,13 +100,23 @@ A Vercel detecta o push e faz um novo deploy automaticamente.
 
 ## Possíveis problemas
 
+### Warning: "Failed to hardlink files; falling back to full copy"
+Adicione a variável de ambiente na Vercel:
+1. Dashboard do projeto → **Settings** → **Environment Variables**
+2. Nome: `UV_LINK_MODE`, Valor: `copy`
+3. Marque **Build** e **Production**
+4. Salve e faça um redeploy
+
+O `vercel.json` já inclui essa variável; se o aviso continuar, configure manualmente no Dashboard.
+
+### API retorna 404 / "Erro ao executar varredura"
+- Confirme que existe a pasta `api/scan/` com o arquivo `index.py`
+- Confira os **Logs** do deploy na Vercel (Runtime Logs) para erros de import
+- A API deve estar disponível em `https://seu-dominio.vercel.app/api/scan`
+
 ### "Build failed"
 - Confirme que o `vercel.json` está na raiz do projeto
-- Verifique se o `requirements.txt` inclui `mangum>=0.17.0`
-
-### API retorna 404
-- Verifique se a pasta `api/` está na raiz e contém `scan.py`
-- Confira os logs do deploy na Vercel
+- Verifique se o `requirements.txt` está na raiz e inclui `fastapi` e `requests`
 
 ### Erro de CORS
 - O `api/main.py` já permite todas as origens (`allow_origins=["*"]`). Se mudou, restaure essa configuração.
