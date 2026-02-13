@@ -1,0 +1,15 @@
+[project]
+name = "webvulnscanner"
+version = "0.1.0"
+description = "Ferramenta simples de varredura de vulnerabilidades web (XSS, SQLi, headers inseguros)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="Você", email="you@example.com"}]
+dependencies = [
+    "requests>=2.32.3",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+]
+
+[project.scripts]
+webscan = "scanner.cli:main"
