@@ -2,23 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    },
-    {
       "src": "api/scan.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "api/scan.py"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "frontend/$1"
-    }
+    { "source": "/api/(.*)", "destination": "api/scan.py" },
+    { "source": "/(.*)", "destination": "frontend/$1" }
   ]
 }
