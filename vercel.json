@@ -15,9 +15,6 @@
     { "source": "/(.*)", "destination": "frontend/$1" }
   ]
 }
-  "framework": null,
-  "env": {
-    "UV_LINK_MODE": "copy"
   }
 >>>>>>> e9c5168 (Atualização)
 }
