@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+node_modules
+__pycache__
+*.pyc
+.DS_Store
+.env.local
+.env.*.local
+npm-debug.log
+yarn-debug.log
+.vscode
+tests
+reports
+docs
+Scanner-de-Vulnerabilidades-Web

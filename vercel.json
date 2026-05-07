@@ -15,6 +15,3 @@
     { "source": "/(.*)", "destination": "frontend/$1" }
   ]
 }
-  }
->>>>>>> e9c5168 (Atualização)
-}
